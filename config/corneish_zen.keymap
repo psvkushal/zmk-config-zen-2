@@ -18,13 +18,6 @@
 
 / {
     behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD0";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-        };
-
         td_scr_dn: td_scr_dn {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SCR_DN";
@@ -37,8 +30,6 @@
             label = "TD_SCR_UP";
             #binding-cells = <0>;
             bindings = <&kp PG_UP>, <&kp HOME>;
-
-            tapping-term-ms = <100>;
         };
 
         ws0: ws0 {
