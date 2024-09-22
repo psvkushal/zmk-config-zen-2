@@ -113,7 +113,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CLOSEAPP";
             #binding-cells = <0>;
-            bindings = <&kp F4>, <&kp F4>, <&kp LA(F4)>;
+            bindings = <&kp F4>, <&kp LA(F4)>;
         };
     };
 
