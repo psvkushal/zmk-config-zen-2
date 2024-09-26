@@ -86,6 +86,8 @@
             label = "WS7";
             #binding-cells = <0>;
             bindings = <&kp LA(N7)>, <&kp LS(LA(N7))>;
+
+            tapping-term-ms = <220>;
         };
 
         ws8: ws8 {
@@ -93,6 +95,8 @@
             label = "WS8";
             #binding-cells = <0>;
             bindings = <&kp LA(N8)>, <&kp LS(LA(N8))>;
+
+            tapping-term-ms = <250>;
         };
 
         ws9: ws9 {
