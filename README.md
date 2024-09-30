@@ -9,3 +9,4 @@ The default tapping term of 200ms seems to be the best not too slow that I would
 In the utils layer I am not sure about the csa or sca, the main reason for thinking about csa order is that it would make any combos, with sca order it makes the combos I have in macos easier, IG lets go with sca, and use that order from now on
 
 For some reason while trying out in macos (donot have linux setup for now) shifting to ws7,8 are not registering may be lets try with more tapping term
+Increasing the tapping term solved the issue, but weird thing is I thought my right pointing and ring finger would strong and fast to pull this off not sure what the issue could be
