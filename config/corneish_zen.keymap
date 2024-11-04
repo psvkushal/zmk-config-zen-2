@@ -149,8 +149,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "normal_def_layer";
+        base {
+            display-name = "baseLayer";
 
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
@@ -166,8 +166,8 @@
             >;
         };
 
-        game {
-            display-name = "game_def_layer";
+        gameBase {
+            display-name = "gameBaseLyr";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -193,7 +193,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans      &kp APOS   &kp LBKT  &kp LS(LPAR)  &kp GRAVE        &kp LS(PLUS)  &kp LS(RPAR)    &kp RBKT  &kp EQUAL  &kp LS(PIPE)   &trans
+&trans  &trans      &kp APOS   &kp LBKT  &kp LS(LPAR)  &kp LS(GRAVE)    &kp LS(PLUS)  &kp LS(RPAR)    &kp RBKT  &kp EQUAL  &kp LS(PIPE)   &trans
 &trans  &kp N1      &kp N2     &kp N3    &kp N4        &kp N5           &kp N6        &kp N7          &kp N8    &kp N9     &kp N0         &trans
 &trans  &sk LSHIFT  &sk LCTRL  &sk LALT  &sk LCMD      &kp BACKSPACE    &kp MINUS     &kp UNDERSCORE  &trans    &trans     &kp BACKSLASH  &trans
                                &trans    &trans        &trans           &trans        &trans          &trans
