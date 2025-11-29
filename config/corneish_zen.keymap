@@ -95,8 +95,6 @@
             label = "WS8";
             #binding-cells = <0>;
             bindings = <&kp LA(N8)>, <&kp LS(LA(N8))>;
-
-            tapping-term-ms = <250>;
         };
 
         ws9: ws9 {
@@ -118,6 +116,76 @@
             label = "CLOSEAPP";
             #binding-cells = <0>;
             bindings = <&kp F4>, <&kp LA(F4)>;
+        };
+
+        nws0: nws0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NWS0";
+            #binding-cells = <0>;
+            bindings = <&kp LC(NUMBER_0)>, <&kp LS(LC(N0))>;
+        };
+
+        nws1: nws1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NWS1";
+            #binding-cells = <0>;
+            bindings = <&kp LC(NUMBER_1)>, <&kp LS(LC(NUMBER_1))>;
+        };
+
+        nws2: nws2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NWS2";
+            #binding-cells = <0>;
+            bindings = <&kp LC(NUMBER_2)>, <&kp LS(LC(NUMBER_2))>;
+        };
+
+        nws3: nws3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NWS3";
+            #binding-cells = <0>;
+            bindings = <&kp LC(NUMBER_3)>, <&kp LS(LC(NUMBER_3))>;
+        };
+
+        nws4: nws4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NWS4";
+            #binding-cells = <0>;
+            bindings = <&kp LC(NUMBER_4)>, <&kp LC(LS(NUMBER_4))>;
+        };
+
+        nws5: nws5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NWS5";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N5)>, <&kp LS(LC(N5))>;
+        };
+
+        nws6: nws6 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NWS6";
+            #binding-cells = <0>;
+            bindings = <&kp LC(NUMBER_6)>, <&kp LS(LC(NUMBER_6))>;
+        };
+
+        nws7: nws7 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NWS7";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N7)>, <&kp LS(LC(N7))>;
+        };
+
+        nws8: nws8 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NWS8";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N8)>, <&kp LS(LC(N8))>;
+        };
+
+        nws9: nws9 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NWS9";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N9)>, <&kp LS(LC(N9))>;
         };
     };
 
@@ -226,7 +294,7 @@
         ws {
             bindings = <
 &trans  &trans  &kp LC(LS(TAB))  &kp LS(LA(TAB))  &kp LG(LS(TAB))  &trans    &bt BT_CLR  &kp LG(TAB)   &kp LA(TAB)   &kp LC(TAB)   &trans        &trans
-&trans  &ws1    &ws2             &ws3             &ws4             &ws5      &ws6        &ws7          &ws8          &ws9          &ws0          &trans
+&trans  &nws1   &nws2            &nws3            &nws4            &nws5     &nws6       &nws7         &nws8         &nws9         &nws0         &trans
 &trans  &to 1   &trans           &trans           &to 0            &trans    &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans
                                  &trans           &trans           &trans    &trans      &trans        &trans
             >;
