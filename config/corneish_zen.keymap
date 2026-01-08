@@ -210,7 +210,6 @@
         game_esc {
             bindings = <&kp ESC>;
             key-positions = <14 13 15 12>;
-            layers = <1>;
         };
     };
 
@@ -227,27 +226,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp LC(B)  &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I       &kp O    &kp P     &kp GRAVE
-&sk LALT   &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K       &kp L    &kp SEMI  &kp SQT
-&none      &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp BACKSPACE
-                         &kp LGUI  &mo 2  &kp LCTRL    &kp SPACE  &mo 3  &kp LSHIFT
-            >;
-        };
-
-        gameBase {
-            display-name = "gameBaseLyr";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB         &kp Q  &kp W  &kp E      &kp R  &kp T           &kp Y    &kp U  &kp I       &kp O    &kp P     &kp GRAVE
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F  &kp G           &kp H    &kp J  &kp K       &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z  &kp X  &kp C      &kp V  &kp B           &kp N    &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp BSPC
-                              &kp SPACE  &mo 4  &kp LEFT_ALT    &kp RET  &mo 5  &kp ESCAPE
+&trans          &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I       &kp O    &kp P     &kp GRAVE
+&kp LEFT_ALT    &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K       &kp L    &kp SEMI  &kp BACKSLASH
+&sk LEFT_SHIFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA   &kp DOT  &kp FSLH  &screenShot
+                              &kp LGUI  &mo 1  &kp LCTRL    &kp SPACE  &mo 2  &kp LSHIFT
             >;
         };
 
@@ -261,54 +243,34 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans      &kp APOS   &kp LBKT  &kp LS(LPAR)  &kp GRAVE        &kp LS(PLUS)  &kp LS(RPAR)    &kp RBKT  &kp EQUAL  &kp LS(PIPE)   &trans
-&trans  &kp N1      &kp N2     &kp N3    &kp N4        &kp N5           &kp N6        &kp N7          &kp N8    &kp N9     &kp N0         &trans
-&trans  &sk LSHIFT  &sk LCTRL  &sk LALT  &sk LCMD      &kp BACKSPACE    &kp MINUS     &kp UNDERSCORE  &trans    &trans     &kp BACKSLASH  &trans
-                               &trans    &trans        &trans           &trans        &trans          &trans
+&trans  &trans  &kp APOS  &kp LBKT  &kp LS(LPAR)  &kp GRAVE    &kp LS(PLUS)  &kp LS(RPAR)    &kp RBKT  &kp EQUAL  &kp LS(PIPE)  &trans
+&trans  &kp N1  &kp N2    &kp N3    &kp N4        &kp N5       &kp N6        &kp N7          &kp N8    &kp N9     &kp N0        &trans
+&trans  &trans  &trans    &trans    &trans        &trans       &kp MINUS     &kp UNDERSCORE  &trans    &trans     &trans        &trans
+                          &trans    &trans        &trans       &trans        &trans          &trans
             >;
         };
 
         util {
             display-name = "utilties";
             bindings = <
-&kp F8  &trans  &kp C_PREVIOUS  &kp C_PP   &kp C_NEXT    &kp F5     &td_scr_up  &kp C_VOLUME_UP    &kp UP    &kp C_BRIGHTNESS_INC  &kp F6      &closeApp
-&kp F7  &trans  &kp LSHFT       &kp LCTRL  &kp LEFT_ALT  &trans     &kp BSPC    &kp LEFT           &kp DOWN  &kp RIGHT             &kp C_MUTE  &kp PRINTSCREEN
-&kp F1  &trans  &trans          &trans     &trans        &kp F12    &td_scr_dn  &kp C_VOLUME_DOWN  &kp F11   &kp C_BRIGHTNESS_DEC  &kp F2      &screenShot
-                                &trans     &trans        &trans     &trans      &trans             &trans
+&kp F8  &trans  &kp C_PREVIOUS  &kp C_PP          &kp C_NEXT    &kp F5          &td_scr_up  &kp C_VOLUME_UP    &kp UP    &kp C_BRIGHTNESS_INC  &kp F6      &closeApp
+&kp F7  &trans  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_WIN    &kp BSPC    &kp LEFT           &kp DOWN  &kp RIGHT             &kp C_MUTE  &kp PRINTSCREEN
+&kp F1  &trans  &trans          &trans            &trans        &kp F12         &td_scr_dn  &kp C_VOLUME_DOWN  &kp F11   &kp C_BRIGHTNESS_DEC  &kp F2      &screenShot
+                                &trans            &trans        &trans          &trans      &trans             &trans
             >;
 
             label = "utility";
         };
 
-        game2 {
-            bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp U     &kp N6  &kp N7  &kp N8  &kp N9   &kp N0   &trans
-&kp I   &kp J   &kp L   &kp M   &kp K   &kp Y     &trans  &trans  &trans  &trans   &trans   &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "game additional";
-        };
-
         ws {
             bindings = <
 &trans  &trans  &kp LC(LS(TAB))  &kp LS(LA(TAB))  &kp LG(LS(TAB))  &trans    &bt BT_CLR  &kp LG(TAB)   &kp LA(TAB)   &kp LC(TAB)   &trans        &trans
-&trans  &nws1   &nws2            &nws3            &nws4            &nws5     &nws6       &nws7         &nws8         &nws9         &nws0         &trans
-&trans  &to 1   &trans           &trans           &to 0            &trans    &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans
+&trans  &ws1    &ws2             &ws3             &ws4             &ws5      &ws6        &ws7          &ws8          &ws9          &ws0          &trans
+&trans  &trans  &trans           &trans           &trans           &trans    &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans
                                  &trans           &trans           &trans    &trans      &trans        &trans
             >;
 
             label = "work space";
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
         };
     };
 
@@ -316,8 +278,8 @@
         compatible = "zmk,conditional-layers";
 
         ws_activate {
-            if-layers = <3 2>;
-            then-layer = <5>;
+            if-layers = <2 1>;
+            then-layer = <3>;
         };
     };
 };
