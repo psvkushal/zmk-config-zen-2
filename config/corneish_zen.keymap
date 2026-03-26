@@ -227,9 +227,9 @@
 
             bindings = <
 &trans          &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I       &kp O    &kp P     &kp GRAVE
-&kp LEFT_ALT    &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K       &kp L    &kp SEMI  &kp BACKSLASH
+&sk LEFT_ALT    &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K       &kp L    &kp SEMI  &kp BACKSLASH
 &sk LEFT_SHIFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA   &kp DOT  &kp FSLH  &screenShot
-                              &kp LGUI  &mo 1  &kp LCTRL    &kp SPACE  &mo 2  &kp LSHIFT
+                              &sk LGUI  &mo 1  &sk LCTRL    &kp SPACE  &mo 2  &sk LSHIFT
             >;
         };
 
@@ -253,10 +253,10 @@
         util {
             display-name = "utilties";
             bindings = <
-&kp F8  &trans  &kp C_PREVIOUS  &kp C_PP          &kp C_NEXT    &kp F5          &td_scr_up  &kp C_VOLUME_UP    &kp UP    &kp C_BRIGHTNESS_INC  &kp F6      &closeApp
-&kp F7  &trans  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_WIN    &kp BSPC    &kp LEFT           &kp DOWN  &kp RIGHT             &kp C_MUTE  &kp PRINTSCREEN
-&kp F1  &trans  &trans          &trans            &trans        &kp F12         &td_scr_dn  &kp C_VOLUME_DOWN  &kp F11   &kp C_BRIGHTNESS_DEC  &kp F2      &screenShot
-                                &trans            &trans        &trans          &trans      &trans             &trans
+&kp F8  &trans          &kp C_PREVIOUS  &kp C_PP      &kp C_NEXT    &kp F5     &td_scr_up  &kp C_VOLUME_UP    &kp UP    &kp C_BRIGHTNESS_INC  &kp F6      &closeApp
+&kp F7  &sk LEFT_SHIFT  &sk LCTRL       &sk LEFT_ALT  &sk LEFT_WIN  &trans     &kp BSPC    &kp LEFT           &kp DOWN  &kp RIGHT             &kp C_MUTE  &kp PRINTSCREEN
+&kp F1  &trans          &trans          &trans        &trans        &kp F12    &td_scr_dn  &kp C_VOLUME_DOWN  &kp F11   &kp C_BRIGHTNESS_DEC  &kp F2      &screenShot
+                                        &trans        &trans        &trans     &trans      &trans             &trans
             >;
 
             label = "utility";
